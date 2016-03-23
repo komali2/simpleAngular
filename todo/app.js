@@ -6,4 +6,8 @@ angular.module('app',[])
     $scope.todos.push({title: todo, due: Date.now()});
     $scope.newTodo = '';
   };
+
+  $scope.done = function(index){
+    $scope.todos.splice(index, 1);
+  };
 });
