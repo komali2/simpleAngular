@@ -9,6 +9,7 @@
     <section class='demo'>
       <input type='text' class='todo-input' placeholder='new todo' ng-model='newTodo'>
       <button ng-click='addTodo(newTodo)'>add</button>
+      <h3 ng-if='!todos.length'> You have no todos today</h3>
       <ul>
         <li ng-repeat='todo in todos' ng-click='done($index)'>
           <h3>{{todo.title}}</h3>
