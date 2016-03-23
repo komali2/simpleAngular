@@ -1,1 +1,1 @@
-a simple angular example
+A set of simple angular examples
