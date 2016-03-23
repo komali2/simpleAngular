@@ -7,10 +7,12 @@
   </head>
   <body>
     <section class='demo' ng-init="todos=[]">
-      <input type='text' class='todo-input' placeholder='new todo'>
-      <button>add</button>
+      <input type='text' class='todo-input' placeholder='new todo' ng-model='newTodo'>
+      <button ng-click='todos.push(newTodo); newTodo="";'>add</button>
     </section>
     <section class='code'>
+      <h1>$rootScope.todos</h1>
+      <pre>{{ todos | json }}</pre>
 
     </section>
     <script src='angular.min.js'></script>
